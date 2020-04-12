@@ -54,3 +54,36 @@ docker pull alpine
 
 // List all images
 docker image ls
+
+// Check container port
+docker port CONTAINER_NAME
+
+// Check container Inspect
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' CONTAINER_NAME
+
+// List container NetworkSettings
+docker container ls
+
+// Create a conntainer network
+docker network create NETWORK_NAME
+
+// Change image tag
+docker image tag IMAGE_NAME NEW_IMAGE_NAME
+
+// Login to DockerHub
+docker Login
+
+// Logout from DockerHub
+docker logout
+
+// Push an image
+docker image push IMAGE_NAME
+
+// Build a custom image
+dcoker image build -t IMAGE_NAME .
+
+// Remove all containers
+docker container prune -a
+
+// Remove all images
+docker image prune -a
